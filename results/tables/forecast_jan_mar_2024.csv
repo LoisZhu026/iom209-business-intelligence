@@ -1,0 +1,4 @@
+Forecast_Target_Month,Predictor_Assumption_Month,CPI_YoY_pct,Avg_Temperature_F,Assumption_Note,Historical_Mean_Forecast,Linear_Regression_Forecast,Random_Forest_Forecast
+2024-01,2024-01 assumption,3.2335073757208854,51.14516129032258,CPI uses Q4 2023 average; temperature uses Jan 2022-2023 seasonal average.,220.7949165742181,218.36031077434492,216.64166397034012
+2024-02,2024-02 assumption,3.2335073757208854,50.85714285714286,CPI uses Q4 2023 average; temperature uses Feb 2022-2023 seasonal average.,220.7949165742181,218.36734409375896,216.64166397034012
+2024-03,2024-03 assumption,3.2335073757208854,61.66129032258064,CPI uses Q4 2023 average; temperature uses Mar 2022-2023 seasonal average.,220.7949165742181,218.10351021589986,216.39454214036684
