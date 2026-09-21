@@ -12,7 +12,7 @@ class PipelineOutputTests(unittest.TestCase):
         source_dir = ROOT / "upstream" / "group_cleaning"
         self.assertTrue((source_dir / "step1_restaurant_context.ipynb").is_file())
         self.assertTrue((source_dir / "menu_classification_reference.csv").is_file())
-        manifest = (source_dir / "README.md").read_text(encoding="utf-8")
+        manifest = (source_dir / "DATA_PROVENANCE.md").read_text(encoding="utf-8")
         self.assertIn("17,534", manifest)
         self.assertIn("restaurant_sales_data_enriched.csv", manifest)
 

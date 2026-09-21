@@ -1,9 +1,9 @@
 # Historical BCF and tech-layoffs analysis
 
 This folder preserves an earlier individual-analysis direction recovered from
-`/Users/zhuluoyi/workplace/IOM209-texasbistro/Individual209`. It is complete
-code rather than the shorter Desktop draft, whose modelling and forecasting
-sections ended in `TODO` comments.
+the local IOM209 Workplace project. It is complete code rather than the shorter
+Desktop draft, whose modelling and forecasting sections ended in `TODO`
+comments.
 
 This was not the analysis used in the final submitted individual report. The
 submitted report uses Energy-Density Preference (EDP) as the target and CPI YoY

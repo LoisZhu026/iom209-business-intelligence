@@ -21,8 +21,9 @@ evaluation, factor-influence, and forecasting implementation is in
 
 The earlier BCF target with CPI and Austin tech layoffs was recovered from the
 Workplace folder and is preserved separately under
-[`archive/bcf_cpi_layoffs/`](archive/bcf_cpi_layoffs/README.md). It is historical
-work and is not the model reported in the final individual submission.
+[`archive/bcf_cpi_layoffs/`](archive/bcf_cpi_layoffs/HISTORICAL_ANALYSIS.md). It
+is historical work and is not the model reported in the final individual
+submission.
 
 ![Theoretical framework](results/figures/figure_1_theoretical_framework.png)
 
@@ -61,7 +62,7 @@ The January-March 2024 assumptions hold CPI YoY at the Q4 2023 average and use t
 archive/
   bcf_cpi_layoffs/     Recovered earlier analysis, clearly marked non-final
 upstream/
-  group_cleaning/      Step 1 cleaning notebook, menu lookup, and data manifest
+  group_cleaning/      Step 1 notebook, menu lookup, and DATA_PROVENANCE.md
 data/
   raw/                 Local-only Bistro sales input (setup instructions below)
   external/            CPI and Austin weather inputs
