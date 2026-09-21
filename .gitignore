@@ -9,4 +9,5 @@ data/raw/the_bistro_data_final.xlsx
 upstream/group_cleaning/restaurant_sales_data.csv
 upstream/group_cleaning/restaurant_sales_data_cleaned.csv
 upstream/group_cleaning/restaurant_sales_data_enriched.csv
+archive/bcf_cpi_layoffs/the_bistro_data_final.xlsx
 results/tables/model_results.xlsx

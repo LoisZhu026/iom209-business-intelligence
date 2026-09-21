@@ -41,6 +41,30 @@ class PipelineOutputTests(unittest.TestCase):
             ["2024-01", "2024-02", "2024-03"],
         )
 
+    def test_final_and_archived_model_code_are_preserved(self) -> None:
+        final_code = (ROOT / "scripts" / "04_run_models.py").read_text(encoding="utf-8")
+        archived_code = (
+            ROOT / "archive" / "bcf_cpi_layoffs" / "individual_analysis.py"
+        ).read_text(encoding="utf-8")
+        for expected in (
+            "LinearRegression",
+            "RandomForestRegressor",
+            "calc_metrics",
+            "linear.predict",
+            "rf.predict",
+        ):
+            self.assertIn(expected, final_code)
+        for expected in (
+            "LinearRegression",
+            "RandomForestRegressor",
+            "r2_score",
+            "mean_absolute_error",
+            "lr.predict",
+            "rf.predict",
+        ):
+            self.assertIn(expected, archived_code)
+        self.assertNotIn("TODO: Linear Regression", archived_code)
+
     def test_scripts_do_not_depend_on_a_user_home_path(self) -> None:
         for path in (ROOT / "scripts").glob("*.py"):
             self.assertNotIn("/Users/", path.read_text(encoding="utf-8"), path.name)

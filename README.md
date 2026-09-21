@@ -4,6 +4,26 @@ This repository contains my individual IOM209 analysis of how inflation and weat
 
 The work began from the cleaned sales data and business context developed in the [IOM209 group repository](https://github.com/Alex-jjh/ay2526-iom209-restaurant-sales). The code and provenance for that early record-cleaning stage are preserved under `upstream/group_cleaning/` with explicit group attribution. Customer-level sales files are kept out of this public repository; their exact upstream source, dimensions, and checksums are documented there. The main pipeline focuses on my individual extension: the USDA food mapping, dependent-variable construction, external-factor preparation, modelling, evaluation, and forecast pipeline.
 
+## Where the modelling and regression code is
+
+The submitted individual analysis is split into four numbered scripts rather
+than one long `individual_analysis.py` file. The full regression, model
+evaluation, factor-influence, and forecasting implementation is in
+[`scripts/04_run_models.py`](scripts/04_run_models.py). It contains:
+
+- an 18-month chronological training set and six-month test set;
+- a historical-mean baseline;
+- `LinearRegression` and `RandomForestRegressor` models;
+- MAE, RMSE, and R-squared calculations;
+- linear coefficients and Random Forest feature importance;
+- January-March 2024 forecast assumptions and predictions; and
+- the model-performance, factor-influence, and forecast figures.
+
+The earlier BCF target with CPI and Austin tech layoffs was recovered from the
+Workplace folder and is preserved separately under
+[`archive/bcf_cpi_layoffs/`](archive/bcf_cpi_layoffs/README.md). It is historical
+work and is not the model reported in the final individual submission.
+
 ![Theoretical framework](results/figures/figure_1_theoretical_framework.png)
 
 ## Research design
@@ -38,6 +58,8 @@ The January-March 2024 assumptions hold CPI YoY at the Q4 2023 average and use t
 ## Repository structure
 
 ```text
+archive/
+  bcf_cpi_layoffs/     Recovered earlier analysis, clearly marked non-final
 upstream/
   group_cleaning/      Step 1 cleaning notebook, menu lookup, and data manifest
 data/
@@ -45,10 +67,11 @@ data/
   external/            CPI and Austin weather inputs
   processed/           Final 24-month modelling dataset
 scripts/
+  00_prepare_sales_input.py
   01_build_energy_mapping.py
   02_build_external_factors.py
   03_build_model_dataset.py
-  04_run_models.py
+  04_run_models.py      Regression, evaluation, and Jan-Mar 2024 forecasts
 results/
   figures/             Report-ready visual outputs
   tables/              Metrics, predictions, factor influence, and forecasts
